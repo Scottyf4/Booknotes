@@ -1,0 +1,64 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="header">
+  <h1 class="title">CreaksMedia - Book Notes</h1>
+  <form class="inputs" action="/sort" method="POST">
+    <select class="custom-select" name="filterType" id="filter">
+      <option value="">Select a Sort Option</option>
+      <option value="star_rating ASC">Star Rating Ascending</option>
+      <option value="star_rating DESC">Star Rating Descending</option>
+      <option value="publish_year ASC">Publish Year Ascending</option>
+      <option value="publish_year DESC">Publish Year Descending</option>
+      <option value="book_name ASC">Book Title Ascending</option>
+      <option value="book_name DESC">Book Title Descending</option>
+    </select>
+    <button class="button-78" type="submit" id="filter">Apply Sort</button>
+  </form>
+  <form class="inputs" action="/review" method="POST">
+    <button class="button-78">Submit New Review</button>
+  </form>
+</div>
+
+<div class="container-box">
+  <% for(item of allitems){%>
+  <div class="topitem">
+    <div class="innerbox">
+      <h2 class="book-title"><%=item.book_name %></h2>
+      <div class="item">
+        <div class="innerbox">
+          <img
+            class="book-img"
+            src="https://covers.openlibrary.org/b/ISBN/<%=item.isbn%>-M.jpg"
+            alt="<% item.book_name%> image"
+          />
+        </div>
+        <div class="innerbox">
+          <h3 class="author">Author: <%=item.author %></h3>
+          <h4 class="published">First Publish Date: <%=item.publish_year %></h4>
+        </div>
+      </div>
+    </div>
+    <div class="innerbox">
+      <h4 class="section-title">Review</h4>
+      <p class="review"><%=item.review %></p>
+      <h4 class="section-title">Star Rating</h4>
+      <% if (item.star_rating === 5){ %>
+      <h4 id="star" class="stars">⭐⭐⭐⭐⭐</h4>
+      <% } else if (item.star_rating === 4) { %>
+      <h4 id="star" class="stars">⭐⭐⭐⭐</h4>
+      <% } else if (item.star_rating === 3) { %>
+      <h4 id="star" class="stars">⭐⭐⭐</h4>
+      <% } else if (item.star_rating === 2) { %>
+      <h4 id="star" class="stars">⭐⭐</h4>
+      <% } else if (item.star_rating === 1) { %>
+      <h4 id="star" class="stars">⭐</h4>
+      <% } else { %>
+      <h4 id="star" class="stars">No star rating listed</h4>
+      <% } %>
+    </div>
+  </div>
+
+  <%}%>
+</div>
+
+<%- include('partials/footer.ejs'); -%>

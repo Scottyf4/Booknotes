@@ -1,0 +1,246 @@
+html {
+    max-height: 100vh;
+    max-width: 100vw;
+    /* margin-left: 0; */
+    
+}
+
+body {
+    background-image: url(../Assets/oakbacker.jpg);
+    padding: 0;
+    margin: 0 50px;
+}
+
+
+
+.header {
+        display: grid;
+        grid-template-columns: 4fr repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        margin-right: 25px;
+}
+
+
+
+.title {
+    font-family: 'Bebas Neue';
+    font-size: 5em;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.book-title:hover {
+    scale: 1.2;
+    color: #bd9d3d;
+
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.custom-select {
+    min-width: 250px;
+    border: 1px solid #a19a4d;
+  }
+  
+select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .custom-select {
+    /* ... */
+    position: relative;
+  }
+
+  .custom-select::before,
+.custom-select::after {
+  --size: 0.2rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
+}
+
+.button-78 {
+    width: 250px;
+	background-color:rgba(142, 112, 80);
+	border-radius:28px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Figtree';
+	font-size:14px;
+	padding:19px 56px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #bd9d3d;
+    margin-left: 30px;
+}
+.button-78:hover {
+	background-color:#a19a4d;
+}
+.button-78:active {
+	position:relative;
+	top:1px;
+}
+
+.container-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px; 
+        font-family: 'Figtree';
+        color: white;
+        margin-left: 0;
+        margin-right: 0;
+        
+}
+
+.topitem {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background-color: rgba(142, 112, 80, 0.7);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    text-align: center;
+}
+
+.innerbox {
+    padding: 20px 40px;
+}
+
+img:hover {
+   scale: 1.2;
+   transform: perspective(500px) rotate3D(0, 1, 0, 30deg);
+}
+
+.book-title {
+    font-family: 'Bebas Neue';
+    font-size: 3.5em;
+}
+
+.author {
+    font-family: 'Figtree';
+    font-size: 2em;
+}
+
+.published {
+    font-family: 'Figtree';
+    font-size: 1.5em;
+}
+
+.section-title{
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+}
+
+.review {
+    font-family: 'Figtree';
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.stars {
+    margin: 0;
+    font-size: 3em;
+}
+
+.stars:hover {
+    scale: 1.5;     
+}
+
+.review-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+
+}
+
+.newReview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 35%;
+}
+
+#card {
+    backdrop-filter: blur(17px) saturate(105%);
+    -webkit-backdrop-filter: blur(17px) saturate(105%);
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+
+
+
+.footer {
+    font-family: 'Figtree';
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 150px;
+}

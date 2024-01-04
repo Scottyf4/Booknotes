@@ -1,0 +1,119 @@
+<%- include('partials/header.ejs'); -%>
+<div class="header">
+  <h1 class="title">Book Notes - Submit a review</h1>
+  <form class="inputs" action="/" method="GET">
+    <button class="button-78 inputs" type="submit">HOME</button>
+  </form>
+</div>
+<div id="card" class="newReview">
+  <form class="form-horizontal" action="/submit" method="POST">
+    <fieldset>
+      <!-- Form Name -->
+      <legend>Submit Your New Book Review</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Book Title</label>
+        <div class="col-md-12">
+          <input
+            id="textinput"
+            name="booktitle"
+            type="text"
+            placeholder="Enter the Book Title here"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Books ISBN</label>
+        <div class="col-md-12">
+          <input
+            id="textinput"
+            name="bookisbn"
+            type="number"
+            placeholder="Enter the books ISBN"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Author</label>
+        <div class="col-md-12">
+          <input
+            id="textinput"
+            name="bookauthor"
+            type="text"
+            placeholder="Enter the author of the book"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput"
+          >Published Year</label
+        >
+        <div class="col-md-12">
+          <input
+            id="textinput"
+            name="bookpublished"
+            type="number"
+            placeholder="Enter the year the book was published"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textarea">Book Review</label>
+        <div class="col-md-12">
+          <textarea
+            class="form-control"
+            id="textarea"
+            name="bookreview"
+            placeholder="Enter your Book Review here"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput"
+          >Star Rating</label
+        >
+        <div class="col-md-12">
+          <input
+            id="textinput"
+            name="starrating"
+            type="number"
+            placeholder="How many stars out of 5?"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-12 control-label" for="singlebutton"></label>
+        <div class="col-md-12">
+          <button
+            id="singlebutton"
+            name="singlebutton"
+            class="btn btn-primary col-md-12"
+            type="submit"
+          >
+            Submit Review
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs'); -%>
